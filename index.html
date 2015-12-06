@@ -1,0 +1,147 @@
+<!DOCTYPE html> <!-- Telling the browser this is html -->
+<html lang="eng">
+<head>
+  <meta charset="utf-8"> <!-- Telling the browser to display the characters as i intend -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Telling IE to give the user the most up to date experience -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- For mobile - how to display the page when it loads -->
+  <title>Featured Work</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles2.css">
+  <!--<link rel="stylesheet" media="screen and (min-width:100px)" href="css/over500.css">-->
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="row">
+          <div class="col-xs-2">
+            <img class="header__logo"src="http://jimbarry.net/comb.jpg" alt="Picture of honey comb">
+          </div>
+          <div class="col-xs-8 text-right">
+            <div class="title-super text-thin header__title">Jim Barry</div>
+            <div>Beekeeping Technology</div>
+          </div>
+          <div class="col-xs-2">
+            <a id="menu" class="header__menu">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </header>
+      <div class="row header__inner1">
+        <div class="col-md-12">
+          <hr>
+        </div>
+      </div>
+      <nav id="drawer" class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#">Contact</a></li>
+          <li class="nav__item"><a href="#">Events</a></li>
+          <li class="nav__item"><a href="#">Directions</a></li>
+          <li class="nav__item"><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="row header__inner">
+        <div class="col-md-12">
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <img class="img-responsive center-block" src="http://jimbarry.net/Bee-apis1.jpg" class="img-responsive imgmain" alt="Main Image">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-muted text-center">Featured Products</h2>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div>
+          <div class="col-md-4">
+            <img class="img-responsive center-block" src="http://jimbarry.net/candles.jpg" alt="This is a picture of honey." data-toggle="modal" data-target="#project1">
+            <h3 class="text-uppercase">candles</h3>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive center-block" src="http://jimbarry.net/honey.jpg" alt="This is picture2" data-toggle="modal" data-target="#project2">
+            <h3 class="text-uppercase">honey</h3>
+          </div>
+          <div class="col-md-4">
+            <img class="img-responsive center-block" src="http://jimbarry.net/queen.jpg" alt="This is picture3" data-toggle="modal" data-target="#project3">
+            <h3 class="text-uppercase">Queen Bees</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Pure Beeswax Candles</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="images/555.jpeg">
+            Pure beeswax candles are the finest candles available.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade img-responsive" id="project2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Raw Local Honey</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="images/555.jpeg">
+            Raw local honey not only tastes great, but is full of nutrition also.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade img-responsive" id="project3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Queen bees from Fosters, Alabama</h4>
+          </div>
+          <div class="modal-body">
+            <img class="img-responsive" src="images/555.jpeg">
+            Queen bees available in early April.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      /*
+       * Open the drawer when the menu ison is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('.nav');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+
+    </script>
+  </body>
+</html>
